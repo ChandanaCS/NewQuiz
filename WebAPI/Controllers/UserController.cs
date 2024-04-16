@@ -117,7 +117,7 @@ namespace WebAPI.Controllers
             SmtpClient smtpClient = new SmtpClient("smtp-mail.outlook.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("Chandana.Shekar@triconinfotech.com", "Secure@12$%"),
+                Credentials = new NetworkCredential("mail-id", "password"),
                 EnableSsl = true
             };
 
@@ -141,14 +141,14 @@ namespace WebAPI.Controllers
             SmtpClient smtpClient = new SmtpClient("smtp-mail.outlook.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("Chandana.Shekar@triconinfotech.com", "Secure@12$%"),
+                Credentials = new NetworkCredential("mail-id", "password"),
                 EnableSsl = true
             };
 
             // Create email message
             MailMessage mailMessage = new MailMessage
             {
-                From = new MailAddress("Chandana.Shekar@triconinfotech.com"),
+                From = new MailAddress("mail-id"),
                 Subject = "New User Registration",
                 Body = $"Dear Admin,\n\nA new user has registered with the following details:\n\nName: {Name}\nEmail: {EmailId}\nOrganisation: {OrganisationName}\n\nPlease take necessary action.\n\nRegards,\nYour App Team"
             };
