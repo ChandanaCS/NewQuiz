@@ -124,7 +124,7 @@ namespace WebAPI.Controllers
             // Create email message
             MailMessage mailMessage = new MailMessage
             {
-                From = new MailAddress("Chandana.Shekar@triconinfotech.com"),
+                From = new MailAddress("mail-id"),
                 Subject = "OTP for Password Reset",
                 Body = $"Your OTP is: {otp}"
             };
